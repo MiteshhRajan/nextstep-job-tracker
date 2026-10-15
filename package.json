@@ -1,0 +1,41 @@
+{
+  "name": "app_tracking",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"tsx watch server/index.ts\" \"vite\"",
+    "build": "tsc -b && tsc -p tsconfig.server.json && vite build",
+    "start": "tsx server/index.ts",
+    "test": "tsx --test server/app.test.ts",
+    "lint": "oxlint",
+    "preview": "npm start"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "^5.3.0",
+    "@fontsource/manrope": "^5.3.0",
+    "better-sqlite3": "^12.11.1",
+    "csv-stringify": "^6.9.0",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0",
+    "lucide-react": "^1.57.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tsx": "^4.23.15",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@types/supertest": "^7.2.1",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^9.2.5",
+    "oxlint": "^1.81.0",
+    "supertest": "^7.3.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
